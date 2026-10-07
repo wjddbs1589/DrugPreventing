@@ -81,10 +81,4 @@
 ---
 
 ## 포함하지 않은 의존 코드
-BNG VR Interaction Framework(`PlayerRotation`, `SmoothLocomotion` 등), Oculus Integration(`OVRScreenFade`), `OptionButton`, 아웃라인 컴포넌트(`Outline`), 기타 단순 연출 스크립트
-
-## 알려진 한계 및 개선 방향
-- **진행 흐름 결합도**: 각 단계가 다음 단계 오브젝트를 직접 켜고 `targetCount`를 올리는 방식이라 순서 변경 시 여러 파일을 수정해야 한다. 단계 목록을 데이터로 관리하는 시나리오 매니저로 분리할 수 있다.
-- **대기 시간 하드코딩**: 대사·연출 대기 시간이 코드에 직접 들어 있다. ScriptableObject 등으로 분리하면 기획 조정이 쉬워진다.
-- **스카이박스 머티리얼 직접 수정**: `RenderSettings.skybox.SetColor`는 머티리얼 에셋 값을 바꾸므로 재시작 전에 원래 값으로 되돌린다. 런타임 사본 머티리얼을 쓰면 복구 코드가 필요 없다.
-- **문자열 기반 호출**: 애니메이션 트리거와 셰이더 속성을 문자열로 지정한다. 해시값을 캐싱해 오타와 비용을 줄일 수 있다.
+BNG VR Interaction Framework(`PlayerRotation`, `SmoothLocomotion` 등), Oculus Integration(`OVRScreenFade`), `OptionButton`, 아웃라인 컴포넌트(`Outline`), 기타 단순 연출 스크립트 등
